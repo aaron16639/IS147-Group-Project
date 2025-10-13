@@ -18,11 +18,12 @@ public class Task2_PasswordValidation {
         scan.close();
     }
 
-    // Method
+    // Method to print the password requirements
     public static void printPasswordRequirements() {
         System.out.println("Password Requirements:");
         System.out.println("Password must have at least 1 special character");
         System.out.println("Password must be at least 8 characters");
+        System.out.println("Password must have at least 1 number");
     }
 
     // Method to check password strength
