@@ -43,5 +43,7 @@ public class Task2_PasswordValidation {
         }
 
         scan.close();
+
+        System.out.println("Aaron");
     }
 }
