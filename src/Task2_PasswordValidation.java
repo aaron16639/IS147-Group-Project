@@ -1,6 +1,29 @@
 import java.util.Scanner;
 
 public class Task2_PasswordValidation {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        printPasswordRequirements();
+
+        System.out.print("Enter your password: ");
+        String password = scan.nextLine();
+
+        if (isPassStrong(password)) {
+            System.out.println("Password is strong.");
+        } else {
+            System.out.println("Password does not meet the required conditions.");
+        }
+
+        scan.close();
+    }
+
+    // Method
+    public static void printPasswordRequirements() {
+        System.out.println("Password Requirements:");
+        System.out.println("Password must have at least 1 special character");
+        System.out.println("Password must be at least 8 characters");
+    }
 
     // Method to check password strength
     public static boolean isPassStrong(String password) {
@@ -29,21 +52,5 @@ public class Task2_PasswordValidation {
 
         // Return true only if all conditions are met
         return hasDigit && hasSpecialChar;
-    }
-
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter your password: ");
-        String password = scan.nextLine();
-
-        if (isPassStrong(password)) {
-            System.out.println("Password is strong.");
-        } else {
-            System.out.println("Password does not meet the required conditions.");
-        }
-
-        scan.close();
-
-        System.out.println("Aaron");
     }
 }
