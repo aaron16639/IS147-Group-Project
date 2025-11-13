@@ -1,4 +1,4 @@
-package Modules;
+package Modules.HumanResources;
 
 import java.util.Scanner;
 
