@@ -1,4 +1,4 @@
-// SavingsAccount.java
+package Finance;// SavingsAccount.java
 // Represents a savings account that earns interest
 
 public class SavingAccount extends BankAccount {

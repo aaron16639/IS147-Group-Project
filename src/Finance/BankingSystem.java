@@ -1,4 +1,4 @@
-// BankingSystem.java
+package Finance;// Finance.BankingSystem.java
 // Handles user interaction and manages all banking operations
 
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-// BankAccount.java
+package Finance;// Finance.BankAccount.java
 // Represents a general bank account
 
 import java.util.Date; // For timestamps
