@@ -2,7 +2,7 @@
 
 **Roles**: 
 	
-	Aaron: PM/SWE
+	Aaron: PM/SWE*
 		
 	Umar: SWE
 	
