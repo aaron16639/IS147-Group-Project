@@ -1,7 +1,6 @@
 // ERPSystemMain.java
 // Main entry point for the ERP system
 
-import Finance.BankingSystem;
 import Operations.CustomerSystem;
 import Inventory.InventorySystem;
 import java.util.Scanner;
