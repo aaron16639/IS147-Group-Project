@@ -18,9 +18,9 @@ public class ERPSystemMain {
         do {
             System.out.println("\n===== ERP System Main Menu =====");
             System.out.println("1. Banking / Finance System");
-            System.out.println("2. Human Resources System (Coming Soon)");
+            System.out.println("2. Human Resources System ");
             System.out.println("3. Operations System");
-            System.out.println("4. Inventory Management (Coming Soon)");
+            System.out.println("4. Inventory Management ");
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
             choice = input.nextInt();

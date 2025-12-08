@@ -227,26 +227,26 @@ abstract class BankAccount {
 
     public void deposit(double amt) {
         if (amt <= 0) {
-            System.out.println("Amount must be positive.");
+            System.out.println("Deposit amount must be positive.");
             return;
         }
         balance += amt;
-        System.out.println("Deposit successful. New balance: " + balance);
+        System.out.printf("Deposited $%.2f. New Balance: $%.2f%n", amt, balance);
     }
 
-    public void withdraw(double amt) {
+    public boolean withdraw(double amt) {
         if (amt <= 0) {
-            System.out.println("Amount must be positive.");
-            return;
+            System.out.println("Withdraw amount must be positive.");
+            return false;
         }
         if (amt > balance) {
             System.out.println("Insufficient funds.");
-            return;
+            return false;
         }
         balance -= amt;
-        System.out.println("Withdraw successful. New balance: " + balance);
+        System.out.printf("Withdrew $%.2f. Remaining: $%.2f%n", amt, balance);
+        return true;
     }
-
     // abstract method
     public abstract void displayInfo();
 
