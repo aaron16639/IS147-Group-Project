@@ -1,5 +1,20 @@
-FROM openjdk:23
-WORKDIR /app
-COPY src/ /app/
-RUN javac *.java
-CMD ["java", "HelloWorld"]
+name: Build and Push to Docker Hub
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      - name: Build Docker Image
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/is147:${{ github.run_number }} .
+      - name: Push Docker Image
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/is147:${{ github.run_number }}
