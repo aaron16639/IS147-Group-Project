@@ -1,5 +1,5 @@
 FROM openjdk:24
 WORKDIR /app
-COPY src/ /app/
-RUN javac *.java
-CMD ["java", "HelloWorld"]
+COPY src/ /app/src/
+RUN javac src/*.java src/*/*.java
+CMD ["java", "-cp", "/app/src", "ERPSystemMain"]
