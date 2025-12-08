@@ -1,6 +1,7 @@
 // ERPSystemMain.java
 // Main entry point for the ERP system
 import Finance.BankingSystem;
+import HumanResources.HumanResources;
 import Operations.CustomerSystem;
 import Inventory.InventorySystem;
 import java.util.Scanner;
@@ -11,6 +12,7 @@ public class ERPSystemMain {
 
         Scanner input = new Scanner(System.in);
         BankingSystem bankingSystem = new BankingSystem(); // Create the banking system object
+	    HumanResources hrSystem = new HumanResources();
         CustomerSystem customerSystem = new CustomerSystem();
         InventorySystem InventorySystem = new InventorySystem();
         int choice;
@@ -31,7 +33,8 @@ public class ERPSystemMain {
                     bankingSystem.start(); // Open banking system menu
                     break;
                 case 2:
-                    System.out.println("HR System will be added by another team member.");
+                    System.out.println("\n--- Redirecting to Human Resources System ---");
+                    hrSystem.start(); // Open HR system menu
                     break;
                 case 3:
                     System.out.println("\n--- Redirecting to Operations System ---");
