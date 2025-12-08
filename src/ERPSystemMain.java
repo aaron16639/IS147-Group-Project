@@ -3,7 +3,7 @@
 
 import Finance.BankingSystem;
 import Operations.CustomerSystem;
-
+import Inventory.InventorySystem;
 import java.util.Scanner;
 
 public class ERPSystemMain {
@@ -13,6 +13,7 @@ public class ERPSystemMain {
         Scanner input = new Scanner(System.in);
         BankingSystem bankingSystem = new BankingSystem(); // Create the banking system object
         CustomerSystem customerSystem = new CustomerSystem();
+        InventorySystem InventorySystem = new InventorySystem();
         int choice;
 
         do {
@@ -38,7 +39,7 @@ public class ERPSystemMain {
                     customerSystem.start(); // Open Operations system menu
                     break;
                 case 4:
-                    System.out.println("Inventory System will be added by another team member.");
+                    InventorySystem.start();
                     break;
                 case 0:
                     System.out.println("Exiting ERP System. Goodbye!");
